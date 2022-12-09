@@ -1,1 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 1152px;
+    margin: 0 auto;
+}
+header{
+    padding: 15px 100px;
+    width: 100%;
+    background-color: #F5F5F6;
+}
+.logo{
+    height: 23px;
+    width: 89px;
 
+}
