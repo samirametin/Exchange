@@ -25,8 +25,10 @@
 .img img{
     margin: 0 auto;
 }
-.left{
-    position: relative;
+.exchange{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 .header-text{
     height: 20px;
@@ -52,8 +54,16 @@
 h1{
     text-align: center;
 }
+.name_app{
+    margin-bottom: 20px;
+}
 .left{
     width: 260px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
 }
 .left p{
     color: #9F9F9F;
@@ -75,15 +85,61 @@ h1{
 .btns_1 button:last-child{
     border-radius: 0px 3px 3px 0px;
 }
-.inpt{
+.inpt_base{
     width: 100%;
     height: 102px;
     border: 1px solid #E5E5E5;
     border-radius: 3px ;
+    font-size: 36px;
+    font-weight: 700;
   
 }
-.textinfo{
+.baseInfo{
     color:  #C6C6C6;
     position: absolute;
-    
+    left: 20px;
+    bottom: 0px;
+}
+.right{
+    width: 260px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.right p{
+    color: #9F9F9F;
+
+}
+.btns_2{
+    width: 100%;
+    display: flex;}
+.btns_2 button{
+    width: 24%;
+    color:#959BA4;
+    border: 1px solid #C6C6C6;
+    background-color: white;
+    padding: 5px;
+}
+.btns_2 button:first-child{
+    border-radius: 3px 0px 0px 3px;
+}
+.btns_2 button:last-child{
+    border-radius: 0px 3px 3px 0px;
+}
+.inpt_symbol{
+    width: 100%;
+    height: 102px;
+    border: 1px solid #E5E5E5;
+    border-radius: 3px ;
+    font-size: 36px;
+    font-weight: 700;
+  
+}
+.symbolInfo{
+    color:  #C6C6C6;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
 }
