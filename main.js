@@ -1,14 +1,26 @@
-let basebtns=document.querySelector(".btns_1")
-basebtns.addEventListener("click",function(e){
-    var base=e.target.innerText;
-    let symbolbtns=document.querySelector(".btns_2")
-symbolbtns.addEventListener("click",function(e){
-    var symbol=e.target.innerText;
+let basebtns=document.querySelectorAll(".base")
+basebtns.forEach(button=>{
+    button.addEventListener("click",function(e){
+        let violet=document.querySelector(".left .btns_1 .active")
+        violet.classList.remove("active")
+        e.target.classList.add("active")
+    })
+})
+let symbolbtns=document.querySelectorAll(".symbol")
+symbolbtns.forEach(button=>{
+    button.addEventListener("click",function(e){
+        let violetright=document.querySelector(".right .btns_2 .active")
+        violetright.classList.remove("active")
+        e.target.classList.add("active")
+    })
 })
 
-fetch(`https://api.exchangerate.host/latest?base=${base}&symbol=${symbol}`)
-.then(res=> res.json())
-.then(res=> alert(res))
-
+let inptBase=document.querySelector(".inpt_base")
+let inptSymbol=document.querySelector(".inpt_symbol")
+inptBase.addEventListener("keyup",function(){
+    let result=inptBase.value;
+    inptSymbol.value=result;
+    fetch(`https://api.exchangerate.host/latest?base=${base}&symbols=${symbol}&amount=${result}`)
+    .then(res=>res.json())
+    .then(res=> console.log(res))
 })
-
