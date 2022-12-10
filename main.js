@@ -18,6 +18,10 @@ symbolbtns.forEach(button=>{
 let inptBase=document.querySelector(".inpt_base")
 let inptSymbol=document.querySelector(".inpt_symbol")
 inptBase.addEventListener("keyup",function(){
+    let baseActive=document.querySelector(".left .btns_1 .active")
+    let base=baseActive.value;
+    let symbolActive=document.querySelector(".right .btns_2 .active")
+    let symbol=symbolActive.value;
     let result=inptBase.value;
     inptSymbol.value=result;
     fetch(`https://api.exchangerate.host/latest?base=${base}&symbols=${symbol}&amount=${result}`)
