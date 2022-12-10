@@ -20,7 +20,7 @@ basebtns.forEach(button => {
                 BASE_KURS = kurs
                 const inputBase = document.querySelector(".inpt_base");
                 const inputSymbol = document.querySelector(".inpt_symbol");
-                inputSymbol.value = +inputBase.value * kurs;
+                inputSymbol.value = ( +inputBase.value * kurs).toFixed(3);
                 let baseInfo=document.querySelector(".baseInfo")
                 baseInfo.innerText=`1 ${baseCurr} = ${(BASE_KURS).toFixed(3)} ${symbolCurr.innerText}`
                 let symbolInfo=document.querySelector(".symbolInfo")
@@ -47,7 +47,7 @@ symbolbtns.forEach(button => {
                 SYMBOL_KURS = kurs;
                 const inputBase = document.querySelector(".inpt_base");
                 const inputSymbol = document.querySelector(".inpt_symbol");
-                inputBase.value = Math.round( +inputSymbol.value * kurs);
+                inputBase.value =( +inputSymbol.value * kurs).toFixed(3);
                 let symbolInfo=document.querySelector(".symbolInfo")
                 symbolInfo.innerText=`1 ${symbolCurr} = ${(SYMBOL_KURS).toFixed(3)} ${baseCurr.innerText}`
                 let baseInfo=document.querySelector(".baseInfo")
@@ -60,10 +60,10 @@ symbolbtns.forEach(button => {
 let inptBase = document.querySelector(".inpt_base")
 let inptSymbol = document.querySelector(".inpt_symbol")
 inptBase.addEventListener("keyup", function () {
-    inptSymbol.value = +inptBase.value * BASE_KURS;
+    inptSymbol.value = (+inptBase.value * BASE_KURS).toFixed(3);
 })
 inptSymbol.addEventListener("keyup", function () {
-    inptBase.value = +inptSymbol.value * SYMBOL_KURS;
+    inptBase.value = (+inptSymbol.value * SYMBOL_KURS).toFixed(3);
 })
 
 //FUNCTIONS

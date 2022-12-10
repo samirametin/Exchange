@@ -11,6 +11,7 @@
 .logo{
     height: 23px;
     width: 89px;
+    margin: 0 auto;
 
 }
 .header{
@@ -22,19 +23,17 @@
     background-color: #F5F5F6;
     margin-bottom: 56px;
 }
-.img img{
-    margin: 0 auto;
-}
 .exchange{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 .header-text{
-    height: 20px;
+    height: 30px;
     background-color: white;
     border-radius: 4px;
     font-size: 11px;
+    margin-top: 8px;
 }
 .header-text p{
     padding: 10px;
