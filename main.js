@@ -4,6 +4,7 @@ basebtns.forEach(button=>{
         let violet=document.querySelector(".left .btns_1 .active")
         violet.classList.remove("active")
         e.target.classList.add("active")
+        //
     })
 })
 let symbolbtns=document.querySelectorAll(".symbol")
@@ -12,6 +13,7 @@ symbolbtns.forEach(button=>{
         let violetright=document.querySelector(".right .btns_2 .active")
         violetright.classList.remove("active")
         e.target.classList.add("active")
+        //
     })
 })
 
