@@ -21,6 +21,8 @@ basebtns.forEach(button => {
                 const inputBase = document.querySelector(".inpt_base");
                 const inputSymbol = document.querySelector(".inpt_symbol");
                 inputSymbol.value = +inputBase.value * kurs;
+                let baseInfo=document.querySelector(".baseInfo")
+                baseInfo.innerText=`1 ${baseCurr} = ${kurs} ${symbolCurr.innerText}`
             })
     })
 })
@@ -42,7 +44,9 @@ symbolbtns.forEach(button => {
                 SYMBOL_KURS = kurs;
                 const inputBase = document.querySelector(".inpt_base");
                 const inputSymbol = document.querySelector(".inpt_symbol");
-                inputBase.value = +inputSymbol.value * kurs;
+                inputBase.value = Math.round( +inputSymbol.value * kurs);
+                let symbolInfo=document.querySelector(".symbolInfo")
+                symbolInfo.innerText=`1 ${symbolCurr} = ${kurs} ${baseCurr.innerText}`
             })
     })
 })
